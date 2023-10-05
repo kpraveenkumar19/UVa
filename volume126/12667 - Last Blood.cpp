@@ -7,9 +7,9 @@ int main() {
 	char prob[50], judge[50];
 	while(scanf("%d %d %d", &N, &T, &M) == 3) {
 		int scoreboard[105][25] = {};
-		int prob_blood[25], prob_solve[25];
+		int prob_blood[25], prob_solve[25];//prob_blood stores A-L latest accepted time and problem solve stores corresponding existing teamid
 		memset(prob_blood, -1, sizeof(prob_blood));
-		while(M--) {
+		while(M--) {// go through M submissiosns
 			scanf("%d %d %s %s", &time, &team, &prob, &judge);
 			if(judge[0] == 'Y') {
 				if(scoreboard[team][prob[0] - 'A'] == 0) {
